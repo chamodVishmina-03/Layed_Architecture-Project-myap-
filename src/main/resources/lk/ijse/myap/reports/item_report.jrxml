@@ -1,0 +1,81 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="item_report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cc8c4665-09ea-45e9-874b-14d0dd0a032e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<query language="SQL"><![CDATA[SELECT * FROM item]]></query>
+	<field name="itemId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="itemId"/>
+		<property name="com.jaspersoft.studio.field.label" value="itemId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="itemName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="itemName"/>
+		<property name="com.jaspersoft.studio.field.label" value="itemName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="unitPrice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="unitPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="unitPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="ctId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ctId"/>
+		<property name="com.jaspersoft.studio.field.label" value="ctId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="48" splitType="Stretch">
+		<element kind="staticText" uuid="3351b4c9-91cd-483e-82fd-f33a8d114d37" x="250" y="10" width="100" height="30" forecolor="#FF1B17" fontSize="15.0">
+			<text><![CDATA[Items]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="1a2ec479-48f1-4d98-9d27-6e027ed9f3fc" x="400" y="2" width="100" height="30">
+			<text><![CDATA[Sarath Super Mart ,
+Uragasmanhandiya .]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="34" splitType="Stretch">
+		<element kind="staticText" uuid="ac1822cd-d85c-4a14-966c-d861fff647c6" x="0" y="10" width="80" height="18">
+			<text><![CDATA[itemId]]></text>
+		</element>
+		<element kind="staticText" uuid="429830ab-5e96-4c24-b3f6-cb7f147f8904" x="80" y="10" width="120" height="18">
+			<text><![CDATA[itemName]]></text>
+		</element>
+		<element kind="staticText" uuid="eac81955-a220-46ca-b3dd-52dbf29d4e90" x="240" y="10" width="60" height="18">
+			<text><![CDATA[QTY]]></text>
+		</element>
+		<element kind="staticText" uuid="39aec87d-e3a0-465c-9754-cb76c5bbb6f1" x="330" y="10" width="79" height="18">
+			<text><![CDATA[Unit Price]]></text>
+		</element>
+		<element kind="staticText" uuid="64c85449-1963-4282-8aed-bec6b751e9c0" x="450" y="10" width="100" height="18">
+			<text><![CDATA[CategoryId]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<element kind="textField" uuid="6987632c-a205-4de1-ac29-707427f4ac76" x="0" y="6" width="80" height="20">
+				<expression><![CDATA[$F{itemId}]]></expression>
+			</element>
+			<element kind="textField" uuid="cd3f844e-21f9-473b-815c-8fede28d229d" x="80" y="6" width="120" height="20">
+				<expression><![CDATA[$F{itemName}]]></expression>
+			</element>
+			<element kind="textField" uuid="d69b8bc8-2f5f-483a-82cb-d5b0e07e01be" x="240" y="6" width="60" height="20">
+				<expression><![CDATA[$F{qty}]]></expression>
+			</element>
+			<element kind="textField" uuid="3909ec45-8ec2-44c6-8993-bd6e48992bbb" x="332" y="6" width="77" height="19">
+				<expression><![CDATA[$F{unitPrice}]]></expression>
+			</element>
+			<element kind="textField" uuid="066f4114-8b6d-4a15-8027-f790c2693d12" x="450" y="6" width="100" height="19">
+				<expression><![CDATA[$F{ctId}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

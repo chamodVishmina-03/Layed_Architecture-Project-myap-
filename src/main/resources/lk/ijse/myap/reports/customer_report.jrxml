@@ -1,0 +1,69 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="customer_report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f24076f-f67d-43de-b85e-fdd709852120">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<query language="SQL"><![CDATA[SELECT * FROM customer]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="tele" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tele"/>
+		<property name="com.jaspersoft.studio.field.label" value="tele"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="46" splitType="Stretch">
+		<element kind="staticText" uuid="53ea5501-5ebb-46fa-96ba-546a14474e25" x="220" y="3" width="147" height="37" forecolor="#F22522" markup="none" fontSize="13.0" bold="true">
+			<text><![CDATA[Customer List]]></text>
+		</element>
+	</title>
+	<pageHeader height="52" splitType="Stretch">
+		<element kind="staticText" uuid="5b4e4fa7-5641-4227-9408-c5379f369dd4" x="390" y="6" width="100" height="46">
+			<text><![CDATA[Sarath Super Mart ,
+Uragasmanhandiya .]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="25" splitType="Stretch">
+		<element kind="staticText" uuid="f0a636ba-9e7c-492a-aa53-ce9b92a4d2a8" x="0" y="2" width="100" height="20" fontSize="14.0">
+			<text><![CDATA[Name]]></text>
+		</element>
+		<element kind="staticText" uuid="b7165b43-fbc3-42e5-af06-25c6e8a6a412" x="180" y="2" width="100" height="20" fontSize="10.0">
+			<text><![CDATA[Address ]]></text>
+		</element>
+		<element kind="staticText" uuid="922ce5ef-b9f7-4560-9ae3-d20a76309667" x="390" y="2" width="100" height="20" fontSize="11.0">
+			<text><![CDATA[Telephone]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="5927c796-da52-4a7b-9e2d-7206f689bc3d" x="-5" y="10" width="110" height="20">
+				<expression><![CDATA[$F{name}]]></expression>
+			</element>
+			<element kind="textField" uuid="40d3b1ff-3107-4cd9-9911-f05e7bcc39bd" x="180" y="10" width="99" height="20">
+				<expression><![CDATA[$F{address}]]></expression>
+			</element>
+			<element kind="textField" uuid="c8cba05d-92cf-4ee5-bdda-d7c47227126d" x="391" y="10" width="99" height="20">
+				<expression><![CDATA[$F{tele}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="10" splitType="Stretch"/>
+	<pageFooter height="36" splitType="Stretch">
+		<element kind="staticText" uuid="5a2a77ad-ed0c-4fe4-bdf6-ace1b76963e0" x="230" y="3" width="100" height="30" fontSize="19.0">
+			<text><![CDATA[Thank You]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

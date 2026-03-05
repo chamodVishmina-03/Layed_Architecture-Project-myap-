@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="customerContent" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.myap.controller.CustomerController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-1.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #fc72dc;">
+         <children>
+            <Label text="Customer Manage">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="-1.0" layoutY="50.0" prefHeight="546.0" prefWidth="800.0">
+         <children>
+            <Pane prefHeight="237.0" prefWidth="800.0">
+               <children>
+                  <VBox layoutX="56.0" layoutY="11.0" prefHeight="42.0" prefWidth="252.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label text="ID" />
+                        <TextField fx:id="idField" onKeyPressed="#handleSearchCustomer" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="56.0" layoutY="61.0" prefHeight="42.0" prefWidth="252.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="nameField" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="381.0" layoutY="21.0" prefHeight="61.0" prefWidth="252.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label text="Address" />
+                        <TextArea fx:id="addressField" prefHeight="41.0" prefWidth="252.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="118.0" layoutY="149.0" prefHeight="100.0" prefWidth="565.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleSaveCustomer" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #32fa46;" text="Save">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCustomerUpdate" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: yellow;" text="Update">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCustomerDelete" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: red;" text="Delete">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleReset" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: blue;" text="Reset">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#handlePrint" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: pink;" text="Print">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="56.0" layoutY="111.0" prefHeight="30.0" prefWidth="252.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label text="Tele" />
+                        <TextField fx:id="telField" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="297.0" prefWidth="800.0">
+               <children>
+                  <TableView fx:id="tblCustomer" layoutX="29.0" layoutY="14.0" prefHeight="263.0" prefWidth="743.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="colName" prefWidth="173.60003662109375" text="Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="183.20001220703125" text="Address" />
+                        <TableColumn fx:id="colTele" prefWidth="193.60003662109375" text="Tele" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
