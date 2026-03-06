@@ -17,10 +17,6 @@ import java.util.Map;
 
 public interface OrderDetailsDAO extends CrudDAO<OrderDetails> {
 
-//    public boolean saveOrderDetails(List<OrderDetailsDTO> detailsList) throws SQLException;
-//
-//    public boolean updateItemStock(List<OrderDetailsDTO> detailsList) throws SQLException;
-
 
 
 

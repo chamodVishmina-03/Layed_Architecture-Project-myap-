@@ -12,9 +12,4 @@ import java.util.List;
 
 public interface CategoryDAO extends CrudDAO<Category> {
 
-//    boolean save(CategoryDTO dto) throws SQLException;
-//    boolean update(CategoryDTO dto) throws SQLException;
-//    boolean delete(String id) throws SQLException;
-//    CategoryDTO search(String id) throws SQLException;
-//    List<CategoryDTO> getAll() throws SQLException;
 }

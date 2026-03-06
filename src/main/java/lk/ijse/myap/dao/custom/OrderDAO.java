@@ -11,9 +11,4 @@ import java.sql.SQLException;
 public interface OrderDAO extends CrudDAO<Orders> {
    public  String getNextOrderId() throws SQLException;
 
-//    public String getNextOrderId() throws SQLException ;
-//
-//    public boolean save(OrdersDTO order) throws SQLException ;
-//
-//    public void printOrderReport(String orderId) throws SQLException, JRException;
 }

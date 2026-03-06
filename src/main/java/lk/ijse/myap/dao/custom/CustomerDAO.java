@@ -14,27 +14,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface CustomerDAO extends CrudDAO<Customer>{
-//    public boolean saveCustomer(CustomerDTO customerDTO)throws SQLException;
-//
-//
-//    public boolean updateCustomer(CustomerDTO customerDTO)throws SQLException;
-//
-//
-//
-//    public boolean deleteCustomer(String id)throws SQLException;
-//
-//
-//
-//
-//    public CustomerDTO searchCustomer(String id) throws SQLException;
-//
-//
-//
-//
-//    public List<CustomerDTO> getCustomer() throws SQLException ;
-//
-//
-//    public void printCustomerReport()throws SQLException, JRException;
-//
+
 
 }
