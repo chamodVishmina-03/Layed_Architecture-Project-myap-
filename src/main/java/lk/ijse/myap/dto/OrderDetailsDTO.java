@@ -70,8 +70,7 @@ public class OrderDetailsDTO {
     public void setLineTotal(double lineTotal) {
         this.lineTotal = lineTotal;
     }
-    
-    
-    
-    
+
+
+
 }

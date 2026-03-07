@@ -223,8 +223,18 @@ public class OrdersController implements Initializable {
 
         /// transaction///
         List<OrderDetails> detailsList = new ArrayList<>();
-        for (OrderDetailsDTO orderDetailsDTO : (cartList)) {
 
+        for (OrderDetailsDTO dto : cartList) {
+            OrderDetails detail = new OrderDetails(
+                    dto.getOrderId(),
+                    dto.getItemId(),
+                    dto.getOrderQty(),
+                    dto.getUnitPrice(),
+                    dto.getLineTotal()
+
+            );
+
+            detailsList.add(detail);
         }
 
 
@@ -245,9 +255,7 @@ public class OrdersController implements Initializable {
 
             Orders order = new Orders(orderId, orderDate);
 
-
-
-            boolean result = placedOrderBO.placeOrder( order, detailsList);
+            boolean result = placedOrderBO.placeOrder(order, detailsList);
 
             if (result) {
                 new Alert(Alert.AlertType.INFORMATION, " Order Placed Successfully! Total: " + String.format("%.2f", order.getTotalPrice())).show();
@@ -259,7 +267,9 @@ public class OrdersController implements Initializable {
             }
 
         } catch (Exception e) {
-            new Alert(Alert.AlertType.ERROR, "An unexpected error occurred.").show();
+
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, "Error: " + e.getMessage()).show();
         }
     }
 

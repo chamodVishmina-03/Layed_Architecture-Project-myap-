@@ -15,6 +15,14 @@ public class OrderDetails {
         this.lineTotal = lineTotal;
     }
     public OrderDetails() {}
+
+    public OrderDetails(String orderId, String itemId, int orderQty, double unitPrice) {
+        this.orderId = orderId;
+        this.itemId = itemId;
+        this.orderQty = orderQty;
+        this.unitPrice = unitPrice;
+    }
+
     public String getOrderId() {
         return orderId;
     }

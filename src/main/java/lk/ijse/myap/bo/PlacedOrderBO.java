@@ -25,4 +25,5 @@ public interface PlacedOrderBO extends SuperBO {
 
     public void printOrderReport(String orderId) throws SQLException, JRException;
 
+
 }

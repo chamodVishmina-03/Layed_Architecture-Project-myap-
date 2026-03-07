@@ -27,21 +27,34 @@ public class PlacedOrderBOImpl implements PlacedOrderBO {
         return orderDAO.save(order);
     }
     public boolean placeOrder(Orders order, List<OrderDetails> detailsList) throws SQLException {
-        return orderDAO.save(order) && orderDetailsDAO.save((OrderDetails) detailsList);
+        //return orderDAO.save(order) && orderDetailsDAO.save((OrderDetails) detailsList);
+        if (!orderDAO.save(order)) {
+            return false;
+        }
+
+        if (!orderDetailsDAO.save( detailsList)) {
+            return false;
+        }
+
+        if (!orderDetailsDAO.update( detailsList)) {
+            return false;
+        }
+
+        return true;
     }
 
     @Override
     public void printOrderReport(String orderId) throws SQLException, JRException {
-       orderDAO.printReport(orderId);
+        orderDAO.printReport(orderId);
     }
 
     @Override
     public boolean saveOrderDetails(List<OrderDetails> detailsList) throws SQLException {
-        return orderDetailsDAO.save((OrderDetails) detailsList);
+        return orderDetailsDAO.save(detailsList);
     }
 
     @Override
     public boolean updateItemStock(List<OrderDetails> detailsList) throws SQLException {
-        return orderDetailsDAO.update((OrderDetails) detailsList);
+        return orderDetailsDAO.update(detailsList);
     }
 }
